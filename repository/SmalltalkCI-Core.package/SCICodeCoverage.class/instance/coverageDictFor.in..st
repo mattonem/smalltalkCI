@@ -7,6 +7,7 @@ coverageDictFor: aCompiledMethod in: aDirectoryName
 		ifFalse: [ aCompiledMethod isAbstract
 				ifTrue: [ nil ]
 				ifFalse: [ 0 ] ].
+	self log: 'YOLO<<',(self relativePathOf: filePath) asString , '<<', coverageSymbol asString.
 	^ Dictionary
 		newFrom:
 			{('name' -> (self relativePathOf: filePath)).
